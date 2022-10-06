@@ -21,5 +21,25 @@ public class TipCalculatorRunner {
         //Creating object
         TipCalculator tip = new TipCalculator(numPeople, tipPercentage);
 
+        //Asks for the price of an item
+        System.out.println("Enter cost in dollars and cents ex: 4.50  (-1 to end):");
+        double cost = scan.nextDouble();
+        scan.nextLine();
+        double totalBillBeforeTip = 0;
+        totalBillBeforeTip = totalBillBeforeTip + cost;
+
+        //Use of while loop to track prices of items bought by user
+        while (cost != -1) {
+            System.out.println("Enter cost in dollars and cents ex: 4.50  (-1 to end):");
+            cost = scan.nextDouble();
+
+            if (cost == -1) {
+                totalBillBeforeTip = totalBillBeforeTip;
+            } else {
+                totalBillBeforeTip = totalBillBeforeTip + cost;
+            }
+
+        }
+
     }
 }
