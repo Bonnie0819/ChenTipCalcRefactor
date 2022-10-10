@@ -29,11 +29,11 @@ public class TipCalculator {
     }
     //tipAmount
     public double tipAmount() {
-        return tipPercentage * totalBillBeforeTip;
+        return tipPercentage *.01 * totalBillBeforeTip;
     }
     //totalBill
     public double totalBill() {
-        return tipAmount() * totalBillBeforeTip;
+        return tipAmount() + totalBillBeforeTip;
     }
     //perPersonCostBeforeTip
     public double perPersonCostBeforeTip() {
